@@ -3,8 +3,6 @@ import random
 from dao import connect_db, connect_redis
 
 app = Flask(__name__)
-conn = connect_db()
-r_conn = connect_redis()
 
 @app.route('/db_get_user')
 def db_get_user():
