@@ -6,6 +6,7 @@ def charge_redis():
         users = cursor.fetchall()
 
         CACHE_KEY = "userinfo"
+        # userinfo_tmp
         print(f"users count: {len(users)}, start charge redis cache")
 
         with connect_redis() as r_conn:
@@ -13,5 +14,7 @@ def charge_redis():
                 r_conn.hset(CACHE_KEY, user_name, f"{user_id},{user_name},{user_age}")
 
             print("redis cache charge completed")
+
+        # rename userinfo_tmp to userinfo
 
 charge_redis()
