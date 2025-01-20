@@ -23,7 +23,7 @@ command: `./benchmark_redis.sh`
 # Transfer rate:          2002.42 [Kbytes/sec] received
 ```
 
-# db resul
+# db result
 command: `./benchmark_db.sh`
 
 ```
